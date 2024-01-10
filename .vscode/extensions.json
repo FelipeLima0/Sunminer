@@ -1,0 +1,65 @@
+{
+    "recommendations": [
+        "amazonwebservices.aws-toolkit-vscode"
+    ]
+}
+// {
+//     "workbench.colorTheme": "Omni",
+//     "workbench.iconTheme": "material-icon-theme",
+//     "[typescript]": {
+//       "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "[typescriptreact]": {
+//       "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "editor.fontLigatures": true,
+//     "editor.fontFamily": "Fira Code",
+//     "editor.fontWeight": "540",
+//     "editor.tokenColorCustomizations": {
+//       "textMateRules": [
+//         {
+//           "scope": [
+//             "comment",
+//             "entity.name.type.class", //class names
+//             "keyword", //import, export, return…
+//             "constant", //String, Number, Boolean…, this, super
+//             "storage.modifier", //static keyword
+//             "storage.type.class.js" //class keyword
+//           ],
+//           "settings": {
+//             "fontStyle": "italic bold"
+//           }
+//         }
+//       ]
+//     },
+//     "editor.accessibilitySupport": "off",
+//     "editor.wordWrap": "on",
+//     "[css]": {
+//       "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "editor.bracketPairColorization.enabled": true,
+//     "editor.guides.bracketPairs": true,
+//     "cSpell.userWords": [
+//       "pedido",
+//       "Roboto"
+//     ],
+//     "cSpell.language": "en,pt,pt_BR",
+//     "explorer.confirmDelete": false,
+//     "[html]": {
+//       "editor.defaultFormatter": "esbenp.prettier-vscode"
+//     },
+//     "editor.cursorBlinking": "expand",
+//     "editor.cursorSmoothCaretAnimation": "explicit",
+//     "editor.cursorWidth": 3,
+//     "workbench.colorCustomizations": {
+//       "[Omni]": {}
+//     },
+//     "workbench.tree.indent": 10,
+//     "[jsonc]": {
+//       "editor.defaultFormatter": "vscode.json-language-features"
+//     },
+//     "html.validate.styles": false,
+//     "tabnine.experimentalAutoImports": true,
+//     "tabnine.disableFileRegex": [],
+//     "typescript.updateImportsOnFileMove.enabled": "always",
+//   }
