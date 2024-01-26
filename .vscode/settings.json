@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true
+}
