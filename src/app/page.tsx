@@ -4,14 +4,13 @@ import Image from 'next/image'
 import Logo from '@/assets/LogoLogin.png'
 import HeaderLogin from '@/assets/header.png'
 import { useLogin } from '@/hooks/useLogin'
-import Loading from '@/components/Loading'
 import { Button } from '@/components/Button'
 // ICONS
 import { FaUser } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
 
 export default function Home() {
-  const { handleSubmit, handleUser, loading, register, isValid } = useLogin()
+  const { handleSubmit, handleUser, register, isValid } = useLogin()
 
   return (
     <div className="m-auto flex  justify-between p-0 text-gray-50">
@@ -56,17 +55,13 @@ export default function Home() {
                 {...register('password')}
               />
             </span>
-            {loading ? (
-              <Button
-                onClick={handleSubmit(handleUser)}
-                disabled={!isValid}
-                sizes="Enter"
-              >
-                Entrar
-              </Button>
-            ) : (
-              <Loading />
-            )}
+            <Button
+              onClick={handleSubmit(handleUser)}
+              disabled={!isValid}
+              sizes="Enter"
+            >
+              Entrar
+            </Button>
           </form>
         </div>
       </div>

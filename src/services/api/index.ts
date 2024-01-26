@@ -3,8 +3,6 @@ import ResponseError from './ResponseError'
 
 export const api = axios.create({
   baseURL: 'https://www.sunminer.com/api',
-  timeout: 10000,
-  withCredentials: false,
 })
 
 api.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
