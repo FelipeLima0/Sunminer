@@ -26,9 +26,6 @@ export const useDashboard = (): Props => {
       setStatisticDetails(statistic)
       const quotation = await getQuotation()
       setCotacao(quotation)
-      // HORAIO DA COMPRA
-      const engineTime = await api.rentalTime(1, 1, 2)
-      console.log(engineTime.map((item: any) => item.addtime_txt))
     } catch (error) {
       console.log(error)
     }

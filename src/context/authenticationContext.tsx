@@ -57,11 +57,9 @@ export default function AuthenticationProvider({
 
   const router = useRouter()
 
-  // TODO: quando expirar o token, remover ele da store e redirecionar para o login
-
-  // if (userData === defaultValuesLogin) {
-  //   // router.push('/')
-  // }
+  if (userData === defaultValuesLogin) {
+    router.push('/')
+  }
 
   const exitlogin = () => {
     localStorage.clear()

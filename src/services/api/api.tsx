@@ -1,12 +1,12 @@
 /* eslint-disable camelcase */
-import { UserDataType } from '@/interface/userData'
-import { post } from '.'
-import { LoginType } from '@/interface/login'
+import { DetailsStatistic } from '@/interface/detailsStatistic'
 import { HomeDetails } from '@/interface/homeDetails'
 import { IndicationsDetails } from '@/interface/indicationsDetails'
 import { Product } from '@/interface/infoProduct'
+import { LoginType } from '@/interface/login'
 import { ProductDetails } from '@/interface/productDetails'
-import { DetailsStatistic } from '@/interface/detailsStatistic'
+import { UserDataType } from '@/interface/userData'
+import { post } from '.'
 
 export interface CoinArray {
   label: string
@@ -83,10 +83,8 @@ export const api = {
 
     const data = response.data.data
 
-    // console.log(response)
     return data
   },
-  // /product/getUserProductList
 
   statisticsInfo: async (): Promise<DetailsStatistic> => {
     const response = await post({
@@ -108,13 +106,6 @@ export const api = {
         page_no,
       },
     })
-    // const trades = response.map((item: any) => ({
-    //   label: `${item.bank_name} ${item.card_no}`,
-    //   value: item.id,
-    // }))
-    // const data: Values = response.list.map((item: any) => ({
-    //   amount: `${item.trade_amount}`,
-    // }))
     return response
   },
 
@@ -207,14 +198,10 @@ export const api = {
     return coinDeposit
   },
 
-  payBanckCode: async (
-    // eslint-disable-next-line camelcase
-    pay_id: number,
-  ): Promise<[any]> => {
+  payBanckCode: async (pay_id: number): Promise<[any]> => {
     const response = await post({
       url: '/Account/GetPayBankCode',
       data: {
-        // eslint-disable-next-line camelcase
         pay_id,
       },
     })

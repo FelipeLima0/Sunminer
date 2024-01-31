@@ -1,10 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import Logo from '@/assets/LogoLogin.png'
 import HeaderLogin from '@/assets/header.png'
-import { useLogin } from '@/hooks/useLogin'
 import { Button } from '@/components/Button'
+import { useLogin } from '@/hooks/useLogin'
+import Image from 'next/image'
 // ICONS
 import { FaUser } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
@@ -68,5 +68,3 @@ export default function Home() {
     </div>
   )
 }
-
-// criar component de botao
