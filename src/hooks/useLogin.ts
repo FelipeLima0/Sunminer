@@ -3,6 +3,7 @@ import { useUserData } from '@/context/authenticationContext'
 import { api } from '@/services/api/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { UseFormHandleSubmit, UseFormRegister, useForm } from 'react-hook-form'
 
 interface Props {
@@ -10,9 +11,11 @@ interface Props {
   handleUser(dataUser: userForm): void
   handleSubmit: UseFormHandleSubmit<userForm>
   isValid: boolean
+  state: boolean
 }
 
 export const useLogin = (): Props => {
+  const [state, setState] = useState(false)
   const { handleLogin } = useUserData()
   const router = useRouter()
 
@@ -25,18 +28,25 @@ export const useLogin = (): Props => {
   })
 
   async function handleUser(dataUser: userForm) {
-    const data = await api.login({
-      username: dataUser.username,
-      password: dataUser.password,
-    })
+    try {
+      setState(true)
+      const data = await api.login({
+        username: dataUser.username,
+        password: dataUser.password,
+      })
 
-    handleLogin(data)
-    router.push('content/dashboard')
+      handleLogin(data)
+      router.push('content/dashboard')
+    } catch (error) {
+      setState(false)
+    }
   }
+
   return {
     handleSubmit,
     handleUser,
     register,
     isValid,
+    state
   }
 }
